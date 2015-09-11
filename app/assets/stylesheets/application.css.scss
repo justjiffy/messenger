@@ -1,0 +1,66 @@
+@import url(https://fonts.googleapis.com/css?family=Paytone+One);
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "user";
+
+h1, h3, b, a{
+	font-family: 'Paytone One', sans-serif;
+}
+
+a, a:hover, a:active, a:visited {
+	color: white;
+	text-decoration: none;
+}
+
+.other-mailboxes {
+	height: 150px;
+	width: 150px; 
+	border-radius: 50%;
+	line-height: 150px;
+	text-align: center;
+	vertical-align: middle;
+	background-color: #d6d6d6;
+	color: white;
+	display: inline;
+}
+.super-top-nav {
+	height: 50px;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	background-color: #1f336b;
+	color: white;
+	text-align: right;
+}
+
+.rl-padding {
+	padding-right: 25px;
+	padding-left: 25px;
+}
+
+.verticaltext {
+    transform: rotate(-90deg);
+    transform-origin: right, bottom;
+    -ms-transform: rotate(-90deg);
+    -ms-transform-origin:right, bottom;
+    -webkit-transform: rotate(-90deg);
+    -webkit-transform-origin:right, bottom;
+	position: absolute;
+	bottom: -50px; 
+	right: -150px;
+	text-align: center;
+    color: #c41111;
+    font-family: 'Paytone One', sans-serif;
+}
+.bg-gray {
+	background-color: rgba(221, 221, 221, 0.6)
+}
+.rounded {
+	border: 5px solid black;
+	padding: 10px;
+	border-radius: 25px;
+}
+
+textarea { 
+	border: none;
+ }

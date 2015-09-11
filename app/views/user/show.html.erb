@@ -1,0 +1,20 @@
+<h1><%= @current_user.name %>'s Messages</h1>
+ 
+<p>Displaying all of <%= @current_user.name %>'s Messages:</p>
+
+<div class="rounded">
+<% @messages.where('user1=? OR user2=?', @current_user.id, @current_user.id).each do |f| %>
+ <p><strong><%= f.message %></strong> <span style="float: right; padding-right: 125px;"><i>(sent <%= ago_in_words(f.created_at) %> to <%= @users.find(f.user2).name %> from <%= @users.find(f.user1).name %>)</i></span><hr><br><br> 
+ <% end %>
+
+</div> 
+
+<div class="rounded" style="margin-top: 50px">
+	<h3>Send Message to <%= @current_user.name %> </h3>
+	<%= form_for Mailr.new, url: new_mailr_path do |f| %>
+		<%= f.text_area :message, size: "80x15" %><br>
+		<%= f.hidden_field :user1, :value => "1" %>
+		<%= f.hidden_field :user2, :value => @current_user.id %> 
+		<%= f.submit "Send Message" %>
+		<% end %>
+</div>

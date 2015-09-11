@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mail Room</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<div class="super-top-nav rl-padding">
+		<a style="color: white" href="http://localhost:3000/"><span class='glyphicon glyphicon-home glyph-lg' style='float:left; padding-top: 10px; font-size: 2.2em;'></span></a>
+		<span class="rl-padding" style="text-align: right"><b>Welcome, <%= User.find(1).name %>!</b></span>
+		<button type='button' class='btn navbar-btn bg-gray'><%= link_to "Log Out", users_path %></button>
+	</div>
+
+	<div class="jumbotron rl-padding">
+		<h1 style="color: #c41111">Mail Room</h1>
+	</div>
+
+	<div style="width: 80%" class="center-block">
+		<%= yield %>
+	</div>
+
+<br><br>
+<div class="verticaltext">
+Designed using Bootstrap and Rails by Juli Emmel
+</div>
+</body>
+
+</html>

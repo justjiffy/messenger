@@ -1,0 +1,16 @@
+
+<div style="width: 90%">
+
+<%= link_to ("<button type='button' class='btn btn-primary btn-lg btn-block'>Go to Your Mailbox</button>").html_safe, user_path(@current_user.id) %>
+
+<br><br>
+
+<h3>Other Mailboxes:</h3> 
+
+	<% @users.each do |f| %>
+	<button type="button" class="btn btn-primary btn-lg btn-block">
+	<%= link_to f.name, user_path(f.id) %>	
+	</button>
+	<% end %>
+
+</div>
